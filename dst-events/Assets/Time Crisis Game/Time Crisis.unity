@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4485029, g: 0.4947164, b: 0.55507296, a: 1}
+  m_IndirectSpecularColor: {r: 0.44850248, g: 0.49471575, b: 0.55507207, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -770,6 +770,8 @@ GameObject:
   m_Component:
   - component: {fileID: 909676529}
   - component: {fileID: 909676530}
+  - component: {fileID: 909676531}
+  - component: {fileID: 909676532}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -820,6 +822,123 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7585604138824830809, guid: 10887fc4b48d85247b23787ac74b58a5, type: 3}
   maxAmmo: 5
   startLife: 3
+--- !u!114 &909676531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909676527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3318f88a9088e4ba7f5711e09f7a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyEvents:
+  - key: 99
+    EventKeyPressed:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 909676530}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: ToggleCover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    EventKeyReleased:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 909676530}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: ToggleCover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - key: 323
+    EventKeyPressed:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 909676530}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: Shoot
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    EventKeyReleased:
+      m_PersistentCalls:
+        m_Calls: []
+  - key: 114
+    EventKeyPressed:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 909676532}
+          m_TargetAssemblyTypeName: SimpleTimer, Assembly-CSharp
+          m_MethodName: StartTimer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    EventKeyReleased:
+      m_PersistentCalls:
+        m_Calls: []
+--- !u!114 &909676532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909676527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c8f4883da00104f96fe18e3f74ac87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerDuration: 2
+  loop: 0
+  EventOnTimerStart:
+    m_PersistentCalls:
+      m_Calls: []
+  EventOnTimerCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  EventOnTimerComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 909676530}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Reload
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &988659815
 GameObject:
   m_ObjectHideFlags: 0
