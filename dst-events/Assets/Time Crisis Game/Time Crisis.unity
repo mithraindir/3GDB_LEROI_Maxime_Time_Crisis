@@ -943,6 +943,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1128464820}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ScreenShake
+          m_BoolArgument: 0
+        m_CallState: 2
   bulletPrefab: {fileID: 7585604138824830809, guid: 10887fc4b48d85247b23787ac74b58a5, type: 3}
   maxAmmo: 5
   startLife: 3
@@ -1224,6 +1236,7 @@ GameObject:
   - component: {fileID: 1128464819}
   - component: {fileID: 1128464818}
   - component: {fileID: 1128464817}
+  - component: {fileID: 1128464820}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -1305,6 +1318,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 909676529}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1128464820
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128464816}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1499068f5fc477c49b6c2bdcc0dc6630, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1192269922
 GameObject:
   m_ObjectHideFlags: 0
